@@ -10,9 +10,25 @@ public class WhileLoops {
      * @param num2 - The ending number
      * @return A string consisting of either the range of numbers or Invalid Input
      */
-    public static String fromHereToThere(int num1, int num2) {
+    public static String fromHereToThere(int num1, int num2)
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter you first number");
+        int number1 = scan.nextInt();
+        System.out.println("Please enter you second number");
+        int number2 = scan.nextInt();
+        if (number1>number2)
+        {
+            System.out.println("You have entered an invalid number");
+        }
+        String nums = "";
+        while (number1<=number2)
+        {
+            nums += number1+"";
+            number1++;
+        }
 
-        return ""; // update or remove this line. It is only there so the tests do not show an error.
+        return nums; // update or remove this line. It is only there so the tests do not show an error.
     }
 
     /**
